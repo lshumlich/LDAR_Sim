@@ -1,0 +1,16 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+basemap = {path = "./LDAR_Sim/install/windows_python_wheels/basemap-1.2.2-cp37-cp37m-win_amd64.whl"}
+plotnine = "==0.7.0"
+netcdf4 = {path = "./LDAR_Sim/install/windows_python_wheels/netCDF4-1.5.4-cp37-cp37m-win_amd64.whl"}
+ephem = "==3.7.7.1"
+gdal = {path = "./LDAR_Sim/install/windows_python_wheels/GDAL-3.1.2-cp37-cp37m-win_amd64.whl"}
+
+[requires]
+python_version = "3.7"
