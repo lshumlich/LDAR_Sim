@@ -2,3 +2,7 @@
 *.iml
 *.xml
 *.pyc
+#
+# Ignore current output
+#
+/LDAR_Sim/inputs_template/outputs

@@ -7,14 +7,16 @@ from mpl_toolkits.basemap import Basemap
 import pandas as pd
 import os
 
-wd = 'C:/Users/tarca/PycharmProjects/LDAR_Sim/Github/LDAR_Sim/inputs_template/outputs/'  # Output folder with two programs to compare
+# wd = './../../LDAR_Sim/inputs_template/outputs/'  # Output folder with two programs to compare
+wd = r'../../LDAR_Sim/inputs_template/outputs/'  # Output folder with two programs to compare
+wdx = 'c:/code/LDAR_Sim/LDAR_Sim/inputs_template/outputs/'  # Output folder with two programs to compare
 
 def livemap(wd):
     os.chdir(wd)
-    ref_sites = pd.read_csv(wd + '/P_ref/sites_output_0.csv')
-    alt_sites = pd.read_csv(wd + '/P_alt/sites_output_0.csv')
-    ref_costs = pd.read_csv(wd + '/P_ref/timeseries_output_0.csv')
-    alt_costs = pd.read_csv(wd + '/P_alt/timeseries_output_0.csv')
+    ref_sites = pd.read_csv(wd + 'P_ref/sites_output_0.csv')
+    alt_sites = pd.read_csv(wd + 'P_alt/sites_output_0.csv')
+    ref_costs = pd.read_csv(wd + 'P_ref/timeseries_output_0.csv')
+    alt_costs = pd.read_csv(wd + 'P_alt/timeseries_output_0.csv')
     em_ts = pd.read_csv(wd + 'mean_emissions.csv')
     al_ts = pd.read_csv(wd + 'mean_active_leaks.csv')
 
@@ -160,4 +162,12 @@ def livemap(wd):
 
     weather.close()
 
-livemap(wd)
+def info(wd):
+    print(os.getcwd())
+    arr = os.listdir(wd)
+    print(arr)
+
+
+info(wd)
+info(wdx)
+livemap(wdx)
